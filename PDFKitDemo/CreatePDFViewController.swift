@@ -28,6 +28,7 @@ class CreatePDFViewController: UIViewController {
         txtBody.delegate = self
         txtBody.textColor = UIColor.lightGray
         imgPreviewHeight.constant = 0
+          
         
         buttonSelectImage.addTarget(self, action: #selector(didTapButtonSelectImage), for: .touchUpInside)
         buttonGeneratePDF.addTarget(self, action: #selector(didTapButtonGeneratePDF), for: .touchUpInside)
@@ -41,7 +42,7 @@ class CreatePDFViewController: UIViewController {
         } else { return false }
     }
     
-    func showAlert() {
+    func  showAlert() {
         let alert = UIAlertController(title: "All Data Not Provided", message: "Please provide all information to create a PDF.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -124,7 +125,7 @@ extension CreatePDFViewController: UIImagePickerControllerDelegate , UINavigatio
         }
         
         imgPreview.image = selectedImage
-        imgPreviewHeight.constant = 150 
+        imgPreviewHeight.constant = 150
         dismiss(animated: true, completion: nil)
     }
 }

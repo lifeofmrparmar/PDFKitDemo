@@ -34,7 +34,7 @@ class PreviewViewController: UIViewController {
 extension PreviewViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setupUI() 
     }
     
     override func viewWillAppear(_ animated: Bool) {

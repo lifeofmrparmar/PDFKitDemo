@@ -15,6 +15,7 @@
 		99C28FD824F8CEE80047F8D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C28FD624F8CEE80047F8D9 /* LaunchScreen.storyboard */; };
 		99C28FE024F8DC130047F8D9 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */; };
 		99C28FE224F8DDF30047F8D9 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */; };
+		99C28FE424F917E70047F8D9 /* CreateTablePDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FE324F917E70047F8D9 /* CreateTablePDFViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		99C28FD924F8CEE80047F8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
 		99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		99C28FE324F917E70047F8D9 /* CreateTablePDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTablePDFViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				99C28FCD24F8CEE20047F8D9 /* SceneDelegate.swift */,
 				99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */,
 				99C28FCF24F8CEE20047F8D9 /* CreatePDFViewController.swift */,
+				99C28FE324F917E70047F8D9 /* CreateTablePDFViewController.swift */,
 				99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */,
 				99C28FD124F8CEE20047F8D9 /* Main.storyboard */,
 				99C28FD424F8CEE80047F8D9 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99C28FD024F8CEE20047F8D9 /* CreatePDFViewController.swift in Sources */,
+				99C28FE424F917E70047F8D9 /* CreateTablePDFViewController.swift in Sources */,
 				99C28FE024F8DC130047F8D9 /* PDFCreator.swift in Sources */,
 				99C28FCC24F8CEE20047F8D9 /* AppDelegate.swift in Sources */,
 				99C28FE224F8DDF30047F8D9 /* PreviewViewController.swift in Sources */,
