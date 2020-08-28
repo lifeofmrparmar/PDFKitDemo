@@ -1,24 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSX-Ee-Aee">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create PDF-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreatePDFViewController" customModule="PDFKitDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-0F-f6E">
+                                <rect key="frame" x="20" y="98" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-oP-QX1">
+                                <rect key="frame" x="20" y="383" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-VK-qIN">
+                                <rect key="frame" x="20" y="409" width="374" height="403"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add PDF Title!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-Ue-pCp">
+                                <rect key="frame" x="20" y="124" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zje-yu-tvM">
+                                <rect key="frame" x="162.5" y="338" width="89" height="30"/>
+                                <state key="normal" title="Select Image"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMG-Y3-Aan">
+                                <rect key="frame" x="20" y="178" width="374" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="mKq-0Z-LWg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzu-m3-nJa">
+                                <rect key="frame" x="70" y="822" width="274" height="30"/>
+                                <color key="backgroundColor" red="0.33725490200000002" green="0.4039215686" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Generate PDF">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mVn-Ue-pCp" firstAttribute="leading" secondItem="Jau-0F-f6E" secondAttribute="leading" id="02o-dm-Udd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mVn-Ue-pCp" secondAttribute="trailing" constant="20" id="2NW-oo-rNR"/>
+                            <constraint firstItem="Zje-yu-tvM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3cI-fx-6nT"/>
+                            <constraint firstItem="uzu-m3-nJa" firstAttribute="trailing" secondItem="XXL-VK-qIN" secondAttribute="trailing" constant="-50" id="8qa-BC-9Lt"/>
+                            <constraint firstItem="vMG-Y3-Aan" firstAttribute="trailing" secondItem="mVn-Ue-pCp" secondAttribute="trailing" id="Glz-qc-iHf"/>
+                            <constraint firstItem="vMG-Y3-Aan" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LwN-Bt-iGr"/>
+                            <constraint firstItem="XXL-VK-qIN" firstAttribute="leading" secondItem="mVn-Ue-pCp" secondAttribute="leading" id="NGp-bn-Uku"/>
+                            <constraint firstItem="XXL-VK-qIN" firstAttribute="top" secondItem="o8a-oP-QX1" secondAttribute="bottom" constant="5" id="NJ4-JQ-4sv"/>
+                            <constraint firstItem="o8a-oP-QX1" firstAttribute="top" secondItem="Zje-yu-tvM" secondAttribute="bottom" constant="15" id="NxT-YY-GLk"/>
+                            <constraint firstItem="uzu-m3-nJa" firstAttribute="leading" secondItem="XXL-VK-qIN" secondAttribute="leading" constant="50" id="QNg-kX-w0I"/>
+                            <constraint firstItem="XXL-VK-qIN" firstAttribute="trailing" secondItem="mVn-Ue-pCp" secondAttribute="trailing" id="UvL-fa-wNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o8a-oP-QX1" secondAttribute="trailing" constant="20" id="WLJ-gH-m8s"/>
+                            <constraint firstItem="vMG-Y3-Aan" firstAttribute="leading" secondItem="mVn-Ue-pCp" secondAttribute="leading" id="X4B-zx-RMj"/>
+                            <constraint firstItem="o8a-oP-QX1" firstAttribute="leading" secondItem="Jau-0F-f6E" secondAttribute="leading" id="Ynh-1Y-T80"/>
+                            <constraint firstItem="Jau-0F-f6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="afj-uc-dzA"/>
+                            <constraint firstItem="uzu-m3-nJa" firstAttribute="top" secondItem="XXL-VK-qIN" secondAttribute="bottom" constant="10" id="koH-Om-Lqu"/>
+                            <constraint firstItem="mVn-Ue-pCp" firstAttribute="top" secondItem="Jau-0F-f6E" secondAttribute="bottom" constant="5" id="ktb-Jt-RxL"/>
+                            <constraint firstItem="vMG-Y3-Aan" firstAttribute="top" secondItem="mVn-Ue-pCp" secondAttribute="bottom" constant="20" id="l8d-65-Nxc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uzu-m3-nJa" secondAttribute="bottom" constant="10" id="mIF-4C-ME7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jau-0F-f6E" secondAttribute="trailing" constant="20" id="uFc-F6-Pyo"/>
+                            <constraint firstItem="Jau-0F-f6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yB6-2J-2dL"/>
+                            <constraint firstItem="Zje-yu-tvM" firstAttribute="top" secondItem="vMG-Y3-Aan" secondAttribute="bottom" constant="5" id="znB-eA-zME"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Create PDF" id="I8E-uv-GpL"/>
+                    <connections>
+                        <outlet property="buttonGeneratePDF" destination="uzu-m3-nJa" id="NRb-jl-nzM"/>
+                        <outlet property="buttonSelectImage" destination="Zje-yu-tvM" id="Gix-l8-kJb"/>
+                        <outlet property="imgPreview" destination="vMG-Y3-Aan" id="vSy-UI-LYo"/>
+                        <outlet property="imgPreviewHeight" destination="mKq-0Z-LWg" id="718-S4-sk3"/>
+                        <outlet property="txtBody" destination="XXL-VK-qIN" id="H7V-Fz-Mye"/>
+                        <outlet property="txtTitle" destination="mVn-Ue-pCp" id="wK0-d0-zyq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C1d-Tz-PSW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aSX-Ee-Aee" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FVM-HR-6CF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gBn-MI-E90"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ku-1l-dst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="124.55357142857142"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="lFA-4E-3i1">
+            <objects>
+                <viewController storyboardIdentifier="PreviewViewController" id="8pw-6D-zwZ" customClass="PreviewViewController" customModule="PDFKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afo-BT-ZxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6o8-RC-3Uk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-af-0W7">
+                                <rect key="frame" x="70" y="819" width="274" height="30"/>
+                                <color key="backgroundColor" red="0.33725490200000002" green="0.4039215686" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Share PDF">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aoR-Xk-Wvc" firstAttribute="bottom" secondItem="J3g-af-0W7" secondAttribute="bottom" constant="13" id="EsU-QQ-l5o"/>
+                            <constraint firstItem="6o8-RC-3Uk" firstAttribute="top" secondItem="aoR-Xk-Wvc" secondAttribute="top" id="WxR-0e-Mae"/>
+                            <constraint firstItem="6o8-RC-3Uk" firstAttribute="leading" secondItem="aoR-Xk-Wvc" secondAttribute="leading" id="djU-NH-kN1"/>
+                            <constraint firstItem="J3g-af-0W7" firstAttribute="trailing" secondItem="6o8-RC-3Uk" secondAttribute="trailing" constant="-70" id="fge-jb-9NO"/>
+                            <constraint firstItem="J3g-af-0W7" firstAttribute="top" secondItem="6o8-RC-3Uk" secondAttribute="bottom" constant="10" id="g8B-GJ-U7V"/>
+                            <constraint firstItem="aoR-Xk-Wvc" firstAttribute="trailing" secondItem="6o8-RC-3Uk" secondAttribute="trailing" id="pB3-uB-DJy"/>
+                            <constraint firstItem="J3g-af-0W7" firstAttribute="leading" secondItem="6o8-RC-3Uk" secondAttribute="leading" constant="70" id="tea-MJ-HQM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aoR-Xk-Wvc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rRL-Ar-G7s"/>
+                    <connections>
+                        <outlet property="buttonSharePDF" destination="J3g-af-0W7" id="wzh-eK-mCh"/>
+                        <outlet property="displayPDFView" destination="6o8-RC-3Uk" id="IWg-bm-KJB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLu-nk-HDs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="125"/>
         </scene>
     </scenes>
 </document>

@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		99C28FCC24F8CEE20047F8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FCB24F8CEE20047F8D9 /* AppDelegate.swift */; };
 		99C28FCE24F8CEE20047F8D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FCD24F8CEE20047F8D9 /* SceneDelegate.swift */; };
-		99C28FD024F8CEE20047F8D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FCF24F8CEE20047F8D9 /* ViewController.swift */; };
+		99C28FD024F8CEE20047F8D9 /* CreatePDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FCF24F8CEE20047F8D9 /* CreatePDFViewController.swift */; };
 		99C28FD324F8CEE20047F8D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C28FD124F8CEE20047F8D9 /* Main.storyboard */; };
 		99C28FD524F8CEE80047F8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C28FD424F8CEE80047F8D9 /* Assets.xcassets */; };
 		99C28FD824F8CEE80047F8D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C28FD624F8CEE80047F8D9 /* LaunchScreen.storyboard */; };
+		99C28FE024F8DC130047F8D9 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */; };
+		99C28FE224F8DDF30047F8D9 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99C28FC824F8CEE20047F8D9 /* PDFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C28FCB24F8CEE20047F8D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C28FCD24F8CEE20047F8D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99C28FCF24F8CEE20047F8D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99C28FCF24F8CEE20047F8D9 /* CreatePDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePDFViewController.swift; sourceTree = "<group>"; };
 		99C28FD224F8CEE20047F8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99C28FD424F8CEE80047F8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99C28FD724F8CEE80047F8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99C28FD924F8CEE80047F8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				99C28FCB24F8CEE20047F8D9 /* AppDelegate.swift */,
 				99C28FCD24F8CEE20047F8D9 /* SceneDelegate.swift */,
-				99C28FCF24F8CEE20047F8D9 /* ViewController.swift */,
+				99C28FDF24F8DC130047F8D9 /* PDFCreator.swift */,
+				99C28FCF24F8CEE20047F8D9 /* CreatePDFViewController.swift */,
+				99C28FE124F8DDF30047F8D9 /* PreviewViewController.swift */,
 				99C28FD124F8CEE20047F8D9 /* Main.storyboard */,
 				99C28FD424F8CEE80047F8D9 /* Assets.xcassets */,
 				99C28FD624F8CEE80047F8D9 /* LaunchScreen.storyboard */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C28FD024F8CEE20047F8D9 /* ViewController.swift in Sources */,
+				99C28FD024F8CEE20047F8D9 /* CreatePDFViewController.swift in Sources */,
+				99C28FE024F8DC130047F8D9 /* PDFCreator.swift in Sources */,
 				99C28FCC24F8CEE20047F8D9 /* AppDelegate.swift in Sources */,
+				99C28FE224F8DDF30047F8D9 /* PreviewViewController.swift in Sources */,
 				99C28FCE24F8CEE20047F8D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
